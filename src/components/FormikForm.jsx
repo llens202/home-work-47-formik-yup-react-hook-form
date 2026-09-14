@@ -13,7 +13,7 @@ function LoginForm() {
     email: Yup // Правила для поля email
       .string() // Значення має бути рядком
       .email('Будь ласка, введіть дійсну електронну адресу') // Перевірка формату email
-      .required('Email обов’язковий'), // Поле не може бути порожнім
+      .required('Електронна пошта обов’язкова'), // Поле не може бути порожнім
 
     password: Yup // Правила для password
       .string() // Значення має бути рядком
@@ -38,7 +38,7 @@ function LoginForm() {
 
   return (
     <form onSubmit={formik.handleSubmit}> {/* Formik обробляє submit форми */}
-    <h2>Регестрація (Formik)</h2>
+    <h2>Реєстрація (Formik)</h2>
 
     <div className="input-row">
 
@@ -60,7 +60,7 @@ function LoginForm() {
       </div>
 
     <div className="input-row">
-      <label>Електорнна пошта</label>
+      <label>Електронна пошта</label>
 
       <input
         type="email" // Поле для введення email
@@ -68,7 +68,7 @@ function LoginForm() {
         value={formik.values.email} // Поточне значення email береться з Formik
         onChange={formik.handleChange} // Formik стежить за зміною значення
         onBlur={formik.handleBlur} // Formik фіксує, що користувач залишив поле
-        placeholder="Електронна адреса"
+        placeholder="Електронна пошта"
       />
 
       {formik.touched.email && formik.errors.email && (
