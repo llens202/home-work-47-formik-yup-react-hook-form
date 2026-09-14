@@ -1,16 +1,95 @@
-# React + Vite
+# Form Validation — Formik, Yup & React Hook Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Опис проєкту
 
-Currently, two official plugins are available:
+Навчальний React-проєкт для практики створення та валідації форм.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+У проєкті реалізовано дві форми реєстрації:
 
-## React Compiler
+- форма з використанням **Formik** та **Yup**;
+- форма з використанням **React Hook Form**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Кожна форма містить три поля:
 
-## Expanding the ESLint configuration
+- ім'я;
+- електронна пошта;
+- пароль.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Для полів реалізована валідація та відображення повідомлень про помилки.
+
+## Formik + Yup
+
+У першій формі використовується **Formik** для керування станом форми та **Yup** для створення схеми валідації.
+
+Реалізовано:
+
+- перевірку обов'язкового введення імені;
+- перевірку правильності формату електронної пошти;
+- перевірку обов'язкового введення електронної пошти;
+- перевірку мінімальної довжини пароля — 8 символів;
+- відображення повідомлень про помилки;
+- обробку відправлення форми.
+
+## React Hook Form
+
+У другій формі використовується бібліотека **React Hook Form**.
+
+Реалізовано:
+
+- перевірку обов'язкового введення імені;
+- мінімальну довжину імені — 2 символи;
+- перевірку правильності формату електронної пошти;
+- перевірку обов'язкового введення електронної пошти;
+- перевірку мінімальної довжини пароля — 8 символів;
+- відображення повідомлень про помилки;
+- обробку відправлення форми.
+
+## Використані технології
+
+- React
+- JavaScript
+- Formik
+- Yup
+- React Hook Form
+- CSS
+- Vite
+
+## Встановлення та запуск
+
+1. Клонувати репозиторій:
+
+```bash
+git clone https://github.com/llens202/home-work-47-formik-yup-react-hook-form.git
+```
+
+2. Перейти в папку проєкту:
+
+```bash
+cd home-work-47-formik-yup-react-hook-form
+```
+
+3. Встановити залежності:
+
+```bash
+npm install
+```
+
+4. Запустити проєкт:
+
+```bash
+npm run dev
+```
+
+5. Відкрити адресу, яку покаже Vite у терміналі.
+
+## GitHub
+
+Репозиторій проєкту:
+
+https://github.com/llens202/home-work-47-formik-yup-react-hook-form
+
+## Демо
+
+Демо-версія:
+
+https://home-work-47-formik-yup-react-hook.vercel.app
