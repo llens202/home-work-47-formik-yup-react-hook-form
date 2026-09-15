@@ -14,6 +14,11 @@ form {
 
 .style-form {
     display: flex;
+
+    @media (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 h2 {
