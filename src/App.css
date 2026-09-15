@@ -1,3 +1,14 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
 
 body {
     background-color: aliceblue;
@@ -9,6 +20,7 @@ form {
     justify-content: center;
     font-weight: bold;
     margin: 100px auto 0;
+    padding: 10px;
     gap: 10px;
 }
 
